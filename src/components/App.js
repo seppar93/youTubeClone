@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // Components
 import SearchBar from './SearchBar'
 import VideoList from './VideoList'
+import VideoDetail from './VideoDetail'
 
 // Services 
 import youTube from '../API/YouTube'
@@ -28,6 +29,7 @@ export default class App extends Component {
                 <SearchBar 
                 onTermSubmit={this.onTermSubmit}
                 />
+                <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                 videos={this.state.videos}
                 onVideoSelect={this.onVideoSelect}
